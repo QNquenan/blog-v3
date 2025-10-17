@@ -111,6 +111,7 @@ const { word } = storeToRefs(searchStore)
 .sidebar-nav-item {
 	display: flex;
 	align-items: center;
+	border: 2px solid transparent;
 	gap: 0.5em;
 	padding: 0.5em 1em;
 	border-radius: 0.5em;
@@ -119,14 +120,19 @@ const { word } = storeToRefs(searchStore)
 	&:hover,
 	&.router-link-active {
 		background-color: var(--c-bg-soft);
+		border-color: var(--c-bg-soft);
 		color: var(--c-text);
+	}
+
+	&.router-link-active {
+		border-left: 5px solid var(--c-primary);
 	}
 
 	&.router-link-active::after {
 		content: "⦁";
 		width: 1em;
 		text-align: center;
-		color: var(--c-text-3);
+		color: var(--c-primary);
 	}
 
 	> .iconify {

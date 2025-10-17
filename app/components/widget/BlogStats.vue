@@ -36,7 +36,7 @@ onMounted(async () => {
 </script>
 
 <template>
-<ZWidget card title="博客统计">
+<ZWidget card title="📊博客统计">
 	<ZDlGroup :items="blogStats" size="small" />
 </ZWidget>
 </template>

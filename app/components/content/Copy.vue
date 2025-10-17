@@ -41,13 +41,22 @@ function onInput(event: InputEvent) {
 }
 
 onMounted(async () => {
-	const shiki = await shikiStore.load()
+	try {
+		const shiki = await shikiStore.load()
 
-	await shikiStore.loadLang(language.value)
-	createPlainShiki(shiki).mount(
-		codeInput.value!,
-		shikiStore.getOptions(language.value) as MountPlainShikiOptions,
-	)
+		await shikiStore.loadLang(language.value)
+		createPlainShiki(shiki).mount(
+			codeInput.value!,
+			shikiStore.getOptions(language.value) as MountPlainShikiOptions,
+		)
+	}
+	catch (error) {
+		console.error('Failed to initialize plain-shiki:', error)
+		// Fallback: just set the text content without syntax highlighting
+		if (codeInput.value && props.code) {
+			codeInput.value.textContent = props.code
+		}
+	}
 })
 </script>
 

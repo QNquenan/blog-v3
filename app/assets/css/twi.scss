@@ -1,0 +1,19 @@
+.twikoo .el-button--primary.is-disabled, .twikoo .el-button--primary.is-disabled:active, .twikoo .el-button--primary.is-disabled:focus, .twikoo .el-button--primary.is-disabled:hover, .el-button--primary ,.el-button--primary:focus,
+.el-button--primary:hover {
+    background-color: var(--c-primary);
+    border-color: var(--c-primary);
+}
+
+.tk-icon.__comments,a.tk-action-link {
+    color: var(--c-primary);
+}
+.twikoo svg:not(.tk-extras svg) {
+    fill: var(--c-primary);
+}
+
+.tk-tag-green {
+    border: 1px solid rgb(179 121 168 / 50%);
+    color: var(--c-primary);
+    background: rgb(250 135 177 / 13%);
+}
+.twikoo {}

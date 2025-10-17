@@ -5,29 +5,15 @@ const appConfig = useAppConfig()
 <template>
 <ZRawLink class="zhilu-header">
 	<div v-if="appConfig.header.emojiTail" class="emoji-tail">
-		<span
-			v-for="(emoji, emojiIndex) in appConfig.header.emojiTail"
-			:key="emojiIndex"
-			class="split-char"
-			:style="{ '--delay': `${emojiIndex * .6 - 3}s` }"
-			v-text="emoji"
-		/>
+		<span v-for="(emoji, emojiIndex) in appConfig.header.emojiTail" :key="emojiIndex" class="split-char"
+			:style="{ '--delay': `${emojiIndex * 0.6 - 3}s` }" v-text="emoji" />
 	</div>
-	<NuxtImg
-		:src="appConfig.header.logo"
-		class="zhilu-logo"
-		:class="{ circle: appConfig.header.showTitle }"
-		:alt="appConfig.title"
-	/>
+	<NuxtImg :src="appConfig.header.logo" class="zhilu-logo" :class="{ circle: appConfig.header.showTitle }"
+		:alt="appConfig.title" />
 	<div v-if="appConfig.header.showTitle" class="zhilu-text">
 		<div class="header-title">
-			<span
-				v-for="(char, charIndex) in appConfig.title"
-				:key="charIndex"
-				class="split-char"
-				:style="{ '--delay': `${(charIndex + 1) * .1}s` }"
-				v-text="char"
-			/>
+			<span v-for="(char, charIndex) in appConfig.title" :key="charIndex" class="split-char"
+				:style="{ '--delay': `${(charIndex + 1) * 0.1}s` }" v-text="char" />
 		</div>
 		<div class="header-subtitle">
 			{{ appConfig.header.subtitle }}
@@ -53,7 +39,7 @@ const appConfig = useAppConfig()
 
 	&.circle {
 		width: 3em;
-		border-radius: 2em;
+		border-radius: 1em;
 		box-shadow: 2px 4px 1rem var(--ld-shadow);
 	}
 }
@@ -67,10 +53,14 @@ const appConfig = useAppConfig()
 	font-family: AlimamaFangYuanTi, "Noto Sans SC", sans-serif;
 	font-size: 1.5em;
 	font-synthesis: none;
-	font-variation-settings: "wght" 600, "BEVL" 100;
+	font-variation-settings:
+		"wght" 600,
+		"BEVL" 100;
 
-	> .split-char {
-		animation: 3.14s infinite alternate vf-weight, 2.72s infinite alternate vf-bevel;
+	>.split-char {
+		animation:
+			3.14s infinite alternate vf-weight,
+			2.72s infinite alternate vf-bevel;
 		animation-delay: var(--delay);
 		animation-play-state: paused;
 	}
@@ -82,14 +72,27 @@ const appConfig = useAppConfig()
 }
 
 @keyframes vf-weight {
-	0% { font-weight: 600; }
-	38.2% { font-weight: 300; }
-	100% { font-weight: 900; }
+	0% {
+		font-weight: 600;
+	}
+
+	38.2% {
+		font-weight: 300;
+	}
+
+	100% {
+		font-weight: 900;
+	}
 }
 
 @keyframes vf-bevel {
-	from { font-variation-settings: "BEVL" 100; }
-	to { font-variation-settings: "BEVL" 1; }
+	from {
+		font-variation-settings: "BEVL" 100;
+	}
+
+	to {
+		font-variation-settings: "BEVL" 1;
+	}
 }
 
 .emoji-tail {
@@ -106,7 +109,7 @@ const appConfig = useAppConfig()
 	pointer-events: none;
 	z-index: -2;
 
-	> .split-char {
+	>.split-char {
 		animation: 5s infinite alternate emoji-floating;
 		animation-delay: var(--delay);
 		animation-play-state: paused;

@@ -1,19 +1,5 @@
 <template>
-<ZWidget
-	card
-	dim
-	title="博客/技术社区"
-	bg-img="https://p.qlogo.cn/gh/169994096/169994096/100/"
-	bg-right
->
-	<div class="title text-creative">
-		纸网接入点
-	</div>
-
-	<Tip copy :icon="false" :tip-options="{ placement: 'left' }">
-		<Icon name="ri:qq-fill" />169994096
-	</Tip>
-</ZWidget>
+<div />
 </template>
 
 <style lang="scss" scoped>

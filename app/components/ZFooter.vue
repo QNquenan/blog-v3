@@ -1,5 +1,9 @@
 <script setup lang="ts">
 const appConfig = useAppConfig()
+
+const copyrightHtml = computed(() => {
+	return appConfig.footer.copyright
+})
 </script>
 
 <template>
@@ -19,7 +23,7 @@ const appConfig = useAppConfig()
 			</menu>
 		</div>
 	</nav>
-	<p v-html="appConfig.footer.copyright" />
+	<p v-html="copyrightHtml" />
 </footer>
 </template>
 

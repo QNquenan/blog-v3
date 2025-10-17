@@ -1,8 +1,9 @@
 import {
+	LazyWidgetBlogBulletin,
 	LazyWidgetBlogLog,
 	LazyWidgetBlogStats,
 	LazyWidgetBlogTech,
-	LazyWidgetCommGroup,
+	// LazyWidgetCommGroup,
 	LazyWidgetEmpty,
 	LazyWidgetGithubCard,
 	LazyWidgetToc,
@@ -11,10 +12,11 @@ import { pascal } from 'radash'
 
 // @keep-sorted
 const rawWidgets = {
+	LazyWidgetBlogBulletin,
 	LazyWidgetBlogLog,
 	LazyWidgetBlogStats,
 	LazyWidgetBlogTech,
-	LazyWidgetCommGroup,
+	// LazyWidgetCommGroup,
 	LazyWidgetEmpty,
 	LazyWidgetGithubCard,
 	LazyWidgetToc,
