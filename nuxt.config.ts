@@ -14,6 +14,7 @@ export default defineNuxtConfig({
 				// 此处为元数据的生成器标识，不建议修改
 				{ 'name': 'generator', 'content': packageJson.name, 'data-github-repo': packageJson.homepage, 'data-version': packageJson.version },
 				{ name: 'mobile-web-app-capable', content: 'yes' },
+				{ name: 'msvalidate.01', content: '8BD3AF7E6650E1251EDEDF5CEB12AAC9' },
 			],
 			link: [
 				{ rel: 'icon', href: blogConfig.favicon },

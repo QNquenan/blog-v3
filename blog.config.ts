@@ -68,6 +68,8 @@ const blogConfig = {
 	scripts: [
 		// Twikoo 评论系统
 		{ src: 'https://lib.baomitu.com/twikoo/1.6.44/twikoo.min.js', defer: true },
+		// Microsoft Clarity 追踪代码
+		{ src: 'https://www.clarity.ms/tag/trmlqvobd9', type: 'text/javascript', async: true },
 	],
 
 	/** 自己部署的 Twikoo 服务 */
