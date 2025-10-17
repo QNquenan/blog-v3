@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const blogLog = [
+	{ label: '2025-10-17', value: '文章迁移完毕，补全描述，成功上线' },
 	{ label: '2025-10-16', value: '重构到Clarity 3.4.9' },
 	{ label: '2024-02-04', value: '发布第一篇文章' },
 ]
