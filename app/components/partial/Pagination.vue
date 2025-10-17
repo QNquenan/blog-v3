@@ -23,44 +23,42 @@ onUnmounted(() => {
 </script>
 
 <template>
-<div>
-	<nav
-		class="pagination"
-		:class="{ sticky, expand }"
-		:aria-label="`第${page}页，共${totalPages}页`"
-		:style="{ '--collapsed-width': `${pageArr.length * 2 + 6}em` }"
-	>
-		<ZButton
-			:disabled="page <= 1"
-			class="pagination-button rtl-flip"
-			icon="ph:arrow-fat-left-duotone"
-			aria-label="上一页"
-			@click="page--"
+<nav
+	class="pagination"
+	:class="{ sticky, expand }"
+	:aria-label="`第${page}页，共${totalPages}页`"
+	:style="{ '--collapsed-width': `${pageArr.length * 2 + 6}em` }"
+>
+	<ZButton
+		:disabled="page <= 1"
+		class="pagination-button rtl-flip"
+		icon="ph:arrow-fat-left-duotone"
+		aria-label="上一页"
+		@click="page--"
+	/>
+	<template v-for="i in pageArr" :key="i">
+		<button
+			v-if="Number.isFinite(i)"
+			class="pagination-num"
+			:class="{ active: i === page }"
+			:aria-label="`第${i}页`"
+			@click="page = i"
+			v-text="i"
 		/>
-		<template v-for="i in pageArr" :key="i">
-			<button
-				v-if="Number.isFinite(i)"
-				class="pagination-num"
-				:class="{ active: i === page }"
-				:aria-label="`第${i}页`"
-				@click="page = i"
-				v-text="i"
-			/>
-			<!-- TODO: 点击后自主选择目标页面 -->
-			<button v-else disabled class="pagination-num">
-				…
-			</button>
-		</template>
-		<ZButton
-			:disabled="page >= totalPages"
-			class="pagination-button rtl-flip"
-			icon="ph:arrow-fat-right-duotone"
-			aria-label="下一页"
-			@click="page++"
-		/>
-	</nav>
-	<div ref="pagination-anchor" />
-</div>
+		<!-- TODO: 点击后自主选择目标页面 -->
+		<button v-else disabled class="pagination-num">
+			…
+		</button>
+	</template>
+	<ZButton
+		:disabled="page >= totalPages"
+		class="pagination-button rtl-flip"
+		icon="ph:arrow-fat-right-duotone"
+		aria-label="下一页"
+		@click="page++"
+	/>
+</nav>
+<div ref="pagination-anchor" />
 </template>
 
 <style lang="scss" scoped>
