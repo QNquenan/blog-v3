@@ -1,13 +1,11 @@
 ---
 title: 自用的bf导航栏魔改
-tags:
-  - Butterfly
-  - 魔改
-categories:
-  - 博客
-cover: "https://tuchuang.voooe.cn/images/2024/06/19/bfNav.webp"
-abbrlink: 7aeab8a1
+tags: [博客]
+categories: [代码]
+image: "https://tuchuang.voooe.cn/images/2024/06/19/bfNav.webp"
+description: 这篇文章讲述了博主魔改导航栏的过程
 date: 2024-03-25 21:04:52
+recommend: true
 ---
 
 ## 前言
@@ -16,9 +14,9 @@ date: 2024-03-25 21:04:52
 
 ## 参考
 
-{% link 关于Butterfly的导航栏的一些教程,Ariasaka,https://blog.yaria.top/posts/53e6b356 %}
+[关于Butterfly的导航栏的一些教程](https://blog.yaria.top/posts/53e6b356)
 
-{% link 安知鱼,安知鱼,https://blog.anheyu.com/ %}
+[安知鱼](https://blog.anheyu.com/)
 
 ## 我的魔改
 
@@ -37,7 +35,7 @@ date: 2024-03-25 21:04:52
 - 更改下划线动画由中间向两边扩开
   具体可以看我的
 
-  {% link 超链接动画样式,鹊楠吖,https://www.quenan.cn/posts/42329.html%}
+  [超链接动画样式](https://www.quenan.cn/posts/42329.html)
 
 ### 显示标题洪哥切换动画版
 
@@ -72,14 +70,14 @@ date: 2024-03-25 21:04:52
    ```javascript
    document.addEventListener("pjax:complete", tonav);
    document.addEventListener("DOMContentLoaded", tonav);
-   //响应pjax
+   // 响应pjax
    function tonav() {
      // document.getElementById("name-container").setAttribute("style", "display:none");
 
-     var position = $(window).scrollTop();
+     let position = $(window).scrollTop();
 
      $(window).scroll(function () {
-       var scroll = $(window).scrollTop();
+       let scroll = $(window).scrollTop();
 
        if (scroll > position) {
          document
@@ -89,7 +87,8 @@ date: 2024-03-25 21:04:52
          document
            .getElementsByClassName("menus_items")[1]
            .setAttribute("style", "top: -60px !important");
-       } else {
+       }
+    else {
          document
            .getElementsByClassName("menus_items")[1]
            .setAttribute("style", "");
@@ -106,9 +105,9 @@ date: 2024-03-25 21:04:52
        document.getElementById("name-container").setAttribute("style", "");
        btf.scrollToDest(0, 500);
      }
-     //修复没有弄右键菜单的童鞋无法回顶部的问题
-     document.getElementById("page-name").innerText =
-       document.title.split(" | 鹊楠の小窝")[0];
+     // 修复没有弄右键菜单的童鞋无法回顶部的问题
+     document.getElementById("page-name").innerText
+       = document.title.split(" | 鹊楠の小窝")[0];
      document
        .getElementById("page-name")
        .addEventListener("click", scrollToTop);

@@ -1,23 +1,16 @@
 ---
 title: SpringBootのGet请求新闻列表
-categories:
-  - [Java]
-  - [SpringBoot]
-swiper_index: 3
-tags:
-  - SpringBoot
-  - Java
+categories: [代码]
+tags: [SpringBoot]
 description: SpringBootのGet请求新闻列表案例笔记
-cover: "https://tuchuang.voooe.cn/images/2024/06/19/SpringBoot.webp"
-abbrlink: 82eb68b
-date: 2024-02-07 20:30:00
+image: "https://tuchuang.voooe.cn/images/2024/06/19/SpringBoot.webp"
+date: 2024-02-05 20:30:00
+recommend: true
 ---
 
 ## 前言
 
-> 可以和上期教程放在同意文件夹，或者按照上期教程新建一个项目
->
-> 上期教程传送门：[SpringBoot の Post 登录注册案例](https://www.quenan.cn/posts/51385.html)
+> 可以和上期教程放在同一文件夹，或者按照上期教程新建一个项目
 
 ## 新建数据库表
 
@@ -249,17 +242,17 @@ ALTER TABLE your_table CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_
     {
       "id": 1,
       "title": "1",
-      "content": "111"
+      "content": "111",
     },
     {
       "id": 2,
       "title": "2",
-      "content": "neir"
+      "content": "neir",
     },
     {
       "id": 3,
       "title": "新闻1",
-      "content": "新闻内容"
-    }
+      "content": "新闻内容",
+    },
   ]
   ```

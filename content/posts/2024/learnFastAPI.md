@@ -1,15 +1,9 @@
 ---
-title: FastAPI学习日记（1）
-tags:
-  - Python
-  - 学习
-  - FastAPI
-  - 后端
-categories:
-  - - 后端
-  - - Python
-cover: "https://i.p-i.vip/43/20241016-670fd23d0bb8c.webp"
-abbrlink: 3c84aa18
+title: FastAPI学习日记
+tags: [Pyton, 后端]
+categories: [代码]
+image: "https://i.p-i.vip/43/20241016-670fd23d0bb8c.webp"
+description: FastAPI学习日记
 date: 2024-10-16 22:36:46
 ---
 
@@ -56,7 +50,6 @@ date: 2024-10-16 22:36:46
   from pathlib import Path  # 导入Path类，用于处理文件路径
   from dotenv import load_dotenv  # 从dotenv库导入load_dotenv函数，用于加载.env文件中的环境变量
 
-
   # 定义一个配置类，用于加载和存储环境变量
   class Config:
       def __init__(self):  # 构造函数，在实例化时自动调用
@@ -71,7 +64,6 @@ date: 2024-10-16 22:36:46
       @property
       def env(self):
           return self._env
-
 
   # 创建Config类的实例，并加载环境变量
   config = Config()
@@ -126,17 +118,14 @@ date: 2024-10-16 22:36:46
   # 返回
   from pydantic import BaseModel
 
-
   class ResultBase:
       # 模板
       code: str
       msg: str
       data: dict
 
-
   class ResultModel(BaseModel, ResultBase):
       ...
-
 
   class Result(ResultBase):
       def __init__(self, code, msg, data):
@@ -181,7 +170,6 @@ date: 2024-10-16 22:36:46
   from Common.result import Result
   from Model.demoModel import loginModel
   from Service.demoService import DomeService
-
 
   @app.post('/user/login')
   async def login(loginBody: loginModel):

@@ -1,29 +1,42 @@
 ---
 title: 关于我的个人主页！
 date: 2024-09-16 22:30:31
-tags:
-  - 个人主页
-  - Vue3
-categories:
-  - [前端]
-  - [Vue]
-  - [项目]
-cover: https://i.p-i.vip/43/20240917-66e85c2e8627d.webp
+tags: [前端, Vue, 项目]
+categories: [项目]
+description: 这篇文章介绍了我的个人主页项目
+image: https://i.p-i.vip/43/20240917-66e85c2e8627d.webp
 ---
 
 ## 仓库地址和预览
 
-{% link homepage-for-vue3,鹊楠吖,https://github.com/QNquenan/homepage-for-vue3 %}
+::link-card
+---
+icon: https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg
+title: homepage-for-vue3
+link: "https://github.com/QNquenan/homepage-for-vue3"
+---
+::
 
-{% link 鹊楠の个人主页,鹊楠吖,https://quenan.cn %}
+::link-card
+---
+icon: https://pic1.imgdb.cn/item/68f0ee56c5157e1a8879752c.png
+title: 鹊楠の个人主页
+link: "https://quenan.cn"
+---
+::
 
-![主页预览图](https://i.p-i.vip/43/20240917-66e86759d3795.webp)
+::pic
+---
+src: https://i.p-i.vip/43/20240917-66e86759d3795.webp
+caption: 主页预览图
+---
+::
 
 ## 为什么想写一个主页
 
 因为闲着无聊，同时根域名也空着，就打算写一个个人主页放在根域名，也可以当一张赛博名片））
 
-{% psw 而且最近还在学Vue，正好拿主页来练手 %}
+:blur[而且最近还在学Vue，正好拿主页来练手]
 
 ## 编写路程
 
@@ -33,7 +46,7 @@ cover: https://i.p-i.vip/43/20240917-66e85c2e8627d.webp
 
 ### Vue2 和 Vue3 的区别
 
-我感觉到的区别其实没多少 {% psw 学艺不精，刚入门 %} ，感知明显比较大的有这几点：
+我感觉到的区别其实没多少 :blur[学艺不精，刚入门] ，感知明显比较大的有这几点：
 
 - **本地运行的速度**
 
@@ -91,7 +104,3 @@ cover: https://i.p-i.vip/43/20240917-66e85c2e8627d.webp
 ## 尾声
 
 有啥建议可以提一下！现在处于能用阶段了
-
-### 目前存在的问题
-
-部署在 `vercel` ，套 `初七云` cdn 的时候，会显示 **域名解析错误** 但是我根域名是绑定的 cdn 给的 dns 地址，cdn 源站也配置正确，也能正常通过根域名访问主页，就是管理后台显示解析错误，搞不懂）

@@ -1,14 +1,9 @@
 ---
 title: 外挂标签之聊天记录
-tags:
-  - 外挂标签
-  - 魔改
-  - 博客
-categories:
-  - - 项目
-  - - 博客
-cover: "https://i.p-i.vip/43/20240920-66ed1326c9a39.webp"
-abbrlink: "829283e6"
+tags: [Butterfly, 外挂标签]
+categories: [代码]
+image: "https://i.p-i.vip/43/20240920-66ed1326c9a39.webp"
+description: 这篇文章描述了如何在Butterfly中实现聊天记录样式的外挂标签
 date: 2024-09-20 14:10:31
 ---
 
@@ -17,30 +12,7 @@ date: 2024-09-20 14:10:31
 前几个星期看见 **纸鹿** 佬的聊天记录标签很好看，故有了自己写一个的念头。奈何事情有点多，拖到昨天才有时间来搞这个外挂标签
 
 ## 演示
-
-{% folding open,示例源码 %}
-
-```md
-{% chatBox %}
-
-{% chat test,content %}
-{% chat me,content %}
-
-{% endchatBox %}
-```
-
-{% endfolding %}
-
-{% folding open,渲染效果 %}
-
-{% chatBox %}
-
-{% chat test,content %}
-{% chat me,content %}
-
-{% endchatBox %}
-
-{% endfolding %}
+~~换了个博客，没有预览了~~
 
 ## 源码安装
 
@@ -48,7 +20,7 @@ date: 2024-09-20 14:10:31
 
 在 `[themes]\butterfly\scripts\tag` 目录下新建 `chat.js` ，写入：
 
-```js
+```js[chat.js]
 "use strict";
 
 // 生成聊天框的整体结构
@@ -92,7 +64,7 @@ hexo.extend.tag.register("chatBox", postChatBox, { ends: true });
 
 在 `[themes]\butterfly\source\css\_tags` 目录下新建 `chat.styl` ，写入：
 
-```styl
+```styl[chat.styl]
 .chatBox
     padding: 10px
     width: 100%

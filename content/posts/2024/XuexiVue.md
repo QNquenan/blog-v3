@@ -1,17 +1,10 @@
 ---
 title: Vue学习25-01-18
-cover: "https://i.p-i.vip/43/20250118-678b42b7561e6.webp"
+image: "https://i.p-i.vip/43/20250118-678b42b7561e6.webp"
 description: Vue3的安装以及安装组件库
-abbrlink: "8e24963"
 date: 2025-01-18 13:42:50
-tags:
-  - Vue3
-  - 学习
-  - 笔记
-categories:
-  - [前端]
-  - [Vue]
-  - [笔记]
+tags: [Vue]
+categories: [代码]
 ---
 
 ## 安装 Vue3
@@ -94,8 +87,8 @@ categories:
 
    ```js
    import { createApp } from "vue";
-   import "./style.css";
    import App from "./App.vue";
+   import "./style.css";
 
    const app = createApp(App);
 
@@ -105,12 +98,12 @@ categories:
    全量注册如下：
 
    ```js
-   import { createApp } from "vue";
-   import "./style.css";
-   import App from "./App.vue";
-
    // 导入 Vant
    import Vant from "vant";
+   import { createApp } from "vue";
+   import App from "./App.vue";
+
+   import "./style.css";
    // 引入 Vant 样式
    import "vant/lib/index.css";
 

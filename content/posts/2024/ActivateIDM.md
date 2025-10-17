@@ -1,27 +1,23 @@
 ---
 title: IDM激活，理论永久
-tags:
-  - IDM
-  - 笔记
-categories:
-  - [分享]
-  - [笔记]
+tags: [软件分享]
+categories: [经验分享]
 description: 一行代码激活IDM
-cover: "https://tuchuang.voooe.cn/images/2024/06/19/ActivateIDM.webp"
-swiper_index: 2
-abbrlink: a1ef6e91
+image: "https://tuchuang.voooe.cn/images/2024/06/19/ActivateIDM.webp"
 date: 2024-02-27 12:55:35
 ---
 
 ## 前言
 
-> 本教程所用工具来源于 Github 项目 `IDM-Activation-Script`
->
-> 项目地址：[传送门](https://github.com/WindowsAddict/IDM-Activation-Script)
->
-> 激活完毕可正常更新，如果失效，重新激活即可
+::alert{type="warning"}
+本教程所用工具来源于 Github 项目 `IDM-Activation-Script`
 
-{% folding, 免责声明 %}
+项目地址：[传送门](https://github.com/WindowsAddict/IDM-Activation-Script)
+
+激活完毕可正常更新，如果失效，重新激活即可
+::
+
+::folding{title="免责说明"}
 
 **使用目的** ：该文件夹及其子目录下的所有资源仅供学习和研究使用。其旨在为学术和研究人员提供参考和资料，任何其他目的均不适用。
 
@@ -39,20 +35,7 @@ date: 2024-02-27 12:55:35
 
 在使用该文件夹及其内容前，请确保已仔细阅读并完全理解上述声明和法律参考。您的使用行为将被视为对上述内容的完全接受。
 
-{% endfolding %}
-
-{% folding open , 更新日志 %}
-
-{% timeline 更新日志,blue %}
-
-<!-- timeline 2024-3-18 -->
-
-1. 激活失效，改用冻结使用期
-<!-- endtimeline -->
-
-{% endtimeline %}
-
-{% endfolding %}
+::
 
 ## 正文
 
@@ -66,7 +49,11 @@ date: 2024-02-27 12:55:35
 
 2. 等待片刻，会跳出个窗口
 
-   ![1](https://i.p-i.vip/43/20240923-66f17175b9633.png)
+   ::pic
+   ---
+   src: https://i.p-i.vip/43/20240923-66f17175b9633.png
+   ---
+   ::
 
 3. 意思如下
 

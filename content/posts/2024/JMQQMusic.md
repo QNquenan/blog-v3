@@ -1,19 +1,15 @@
 ---
 title: QQ音乐加密格式解密
-tags:
-  - QQ音乐
-  - 分享
-categories:
-  - - 分享
-  - - 笔记
-abbrlink: cf1fb2ee
+tags: [音乐]
+categories: [经验分享]
 date: 2024-09-23 19:05:51
-cover: https://i.p-i.vip/43/20240923-66f1556bb5392.webp
+image: https://i.p-i.vip/43/20240923-66f1556bb5392.webp
+description: 这是关于QQ音乐(别的应该也可以)的加密格式解密
 ---
 
 ## 前言
 
-{% folding, 免责声明 %}
+::folding{title="免责声明"}
 
 **使用目的** ：该文件夹及其子目录下的所有资源仅供学习和研究使用。其旨在为学术和研究人员提供参考和资料，任何其他目的均不适用。
 
@@ -31,17 +27,22 @@ cover: https://i.p-i.vip/43/20240923-66f1556bb5392.webp
 
 在使用该文件夹及其内容前，请确保已仔细阅读并完全理解上述声明和法律参考。您的使用行为将被视为对上述内容的完全接受。
 
-{% endfolding %}
+::
 
 ### 使用的文件
 
-{% link 转换.zip,123网盘,https://www.123pan.com/s/iXN7Vv-Go4Jv.html %}
+[转换.zip](https://www.123pan.com/s/iXN7Vv-Go4Jv.html)
 
 ## 下载加密文件
 
 首先，安装压缩包内的 **老版本 QQ 音乐**
 
-![老版本QQ音乐](https://i.p-i.vip/43/20240923-66f15134eea85.png)
+::pic
+---
+src: https://i.p-i.vip/43/20240923-66f15134eea85.png
+caption: 老版本QQ音乐
+---
+::
 
 登陆上自己的 **QQ 音乐会员账号** 下载加密音频
 
@@ -51,15 +52,30 @@ cover: https://i.p-i.vip/43/20240923-66f1556bb5392.webp
 
 {% note warning flat %}路径内尽量补药有中文！{% endnote %}
 
-![um-web.extension.v1.10.6 文件夹](https://i.p-i.vip/43/20240923-66f15134ae799.png)
+::pic
+---
+src: https://i.p-i.vip/43/20240923-66f15134ae799.png
+caption: um-web.extension.v1.10.6 文件夹
+---
+::
 
 打开解压出来的 `um-web.extension.v1.10.6` 文件夹下的 `index.html`
 
-![index.html](https://i.p-i.vip/43/20240923-66f15135b4389.png)
+::pic
+---
+src: https://i.p-i.vip/43/20240923-66f15135b4389.png
+caption: index.html
+---
+::
 
 将加密的音乐文件拖入网站提示位置
 
-![提示位置](https://i.p-i.vip/43/20240923-66f15135ea9c2.png)
+::pic
+---
+src: https://i.p-i.vip/43/20240923-66f15135ea9c2.png
+caption: 提示位置
+---
+::
 
 根据提示操作即可
 
@@ -69,10 +85,17 @@ cover: https://i.p-i.vip/43/20240923-66f1556bb5392.webp
 
 安装压缩包内的 **格式工厂**
 
-![格式工厂安装包](https://i.p-i.vip/43/20240923-66f151354c1e9.png)
+::pic
+---
+src: https://i.p-i.vip/43/20240923-66f151354c1e9.png
+caption: 格式工厂安装包
+---
+::
 
 安装完成后打开
 
-{% note warning flat %}小心格式工厂自带的捆绑软件，记得取消勾选{% endnote %}
+::alert{type="warning"}
+小心格式工厂自带的捆绑软件，记得取消勾选
+::
 
 找到 **音频** > **转 MP3** ，根据提示操作即可导出 `.MP3` 格式了

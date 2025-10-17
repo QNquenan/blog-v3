@@ -1,17 +1,11 @@
 ---
 title: 重构博客记录~
-tags:
-  - IDM
-  - 笔记
-cover: "https://i.p-i.vip/43/20240907-66db336a1ac18.webp"
-swiper_index: 6
-description: 一行代码激活IDM
-categories:
-  - [Python]
-  - [笔记]
-  - [博客]
-abbrlink: ae5416c7
+tags: [Hexo, 博客]
+image: "https://i.p-i.vip/43/20240907-66db336a1ac18.webp"
+description: 这是鹊楠重构它的Hexo博客的过程
+categories: [经验分享]
 date: 2024-08-08 20:29:39
+recommend: true
 ---
 
 ## 前言
@@ -113,17 +107,17 @@ date: 2024-08-08 20:29:39
 
 使用的是店长的 `Tag Plugins Plus` 用的是源码部署，站外卡片的样式因为看到 [June](https://blog.june-pj.cn/) 的样式很喜欢，所以就也去洪哥的帖子 cv 了一个下来，略微改改。
 
-{% link 外挂标签,Akilarの糖果屋,https://akilar.top/posts/615e2dec/ %}
+[外挂标签](https://akilar.top/posts/615e2dec/)
 
-{% link Hexo的Butterfly魔改教程：网址卡片外置标签,张洪Heo,https://blog.zhheo.com/p/ccaf9148.html %}
+[Hexo的Butterfly魔改教程：网址卡片外置标签](https://blog.zhheo.com/p/ccaf9148.html)
 
 ## 文章版权卡片美化
 
 使用的是 Fomalhaut 和 店长 的样式，并自己修改了一点 css。
 
-{% link 博客魔改教程总结(二),Fomalhaut,https://www.fomal.cc/posts/5389e93f.html %}
+[博客魔改教程总结(二)](https://www.fomal.cc/posts/5389e93f.html)
 
-{% link （二创）Copyright-beautify,Akilarの糖果屋,https://akilar.top/posts/8322f8e6/ %}
+[（二创）Copyright-beautify](https://akilar.top/posts/8322f8e6/)
 
 修改过的 css:
 
@@ -392,12 +386,13 @@ beautify()
 ```
 
 ## 返回顶部显示网页阅读进度
-
-{% note info simple %}虽然 Buttrtfly 4.6 版本 就加入了内置了这个功能，可以在配置文件开启，但是内置的的滑动没有 Leonus 的丝滑，所以还是选择自己动手。{% endnote %}
+::alert
+虽然 Buttrtfly 4.6 版本 就加入了内置了这个功能，可以在配置文件开启，但是内置的的滑动没有 Leonus 的丝滑，所以还是选择自己动手。
+::
 
 用了 Leonus 的教程，但是发现 Leonus 大佬的 js 在我这里有点小问题，所以也自己修改了一下。
 
-{% link 返回顶部显示网页阅读进度,Leonus,https://blog.leonus.cn/2022/percent.html %}
+[返回顶部显示网页阅读进度](https://blog.leonus.cn/2022/percent.html)
 
 这是我修改过的 js（把 `childNodes` 改成了 `children`）
 
@@ -405,25 +400,26 @@ beautify()
 window.onscroll = percent; // 执行函数
 // 页面百分比
 function percent() {
-  let a = document.documentElement.scrollTop || window.pageYOffset, // 卷去高度
-    b =
-      Math.max(
+  let a = document.documentElement.scrollTop || window.pageYOffset; // 卷去高度
+    let b
+      = Math.max(
         document.body.scrollHeight,
         document.documentElement.scrollHeight,
         document.body.offsetHeight,
         document.documentElement.offsetHeight,
         document.body.clientHeight,
         document.documentElement.clientHeight
-      ) - document.documentElement.clientHeight, // 整个网页高度
-    result = Math.round((a / b) * 100), // 计算百分比
-    up = document.querySelector("#go-up"); // 获取按钮
+      ) - document.documentElement.clientHeight; // 整个网页高度
+    let result = Math.round((a / b) * 100); // 计算百分比
+    let up = document.querySelector("#go-up"); // 获取按钮
   percentSpan = document.querySelector("#percent"); // 获取显示的按钮
 
   if (result <= 95) {
     up.children[0].style.display = "none";
     up.children[1].style.display = "block";
     percentSpan.children[0].innerHTML = result;
-  } else {
+  }
+ else {
     up.children[1].style.display = "none";
     up.children[0].style.display = "block";
   }
@@ -434,7 +430,7 @@ function percent() {
 
 按键防抖：
 
-{% link 博客魔改教程总结(三),Fomalhaut,https://www.fomal.cc/posts/2d7ac914.html %}
+[博客魔改教程总结(三)](https://www.fomal.cc/posts/2d7ac914.html)
 
 ```js
 // 按键防抖
@@ -446,7 +442,8 @@ let TT = null; // 防抖全局计时器
  * @param {防抖时间} time
  */
 function debounce(fn, time) {
-  if (TT !== null) clearTimeout(TT);
+  if (TT !== null)
+clearTimeout(TT);
   TT = setTimeout(fn, time);
 }
 
@@ -463,7 +460,7 @@ document.onkeydown = function (e) {
         pos: "top-right",
         actionText: "版权声明",
         actionTextColor: "#FF8599",
-        onActionClick: function () {
+        onActionClick() {
           location.assign("/privacy");
         },
       });
@@ -472,11 +469,11 @@ document.onkeydown = function (e) {
 
   // 打开控制台
   if (
-    123 == e.keyCode ||
-    (e.ctrlKey &&
-      e.shiftKey &&
-      (74 === e.keyCode || 73 === e.keyCode || 67 === e.keyCode)) ||
-    (e.ctrlKey && 85 === e.keyCode)
+    e.keyCode == 123
+    || (e.ctrlKey
+    	&& e.shiftKey
+    	&& (e.keyCode === 74 || e.keyCode === 73 || e.keyCode === 67))
+   	|| (e.ctrlKey && e.keyCode === 85)
   ) {
     debounce(function () {
       Snackbar.show({
@@ -503,17 +500,17 @@ document.onkeydown = function (e) {
 
 ## Heo 加载动画
 
-{% link Heo同款loading动画,安知鱼,https://blog.anheyu.com/posts/52d8.html %}
+[Heo同款loading动画](https://blog.anheyu.com/posts/52d8.html)
 
 ## 博客宽屏适配
 
-{% link 博客魔改教程总结(四),Fomalhaut,https://www.fomal.cc/posts/d739261b.html %}
+[博客魔改教程总结(四)](https://www.fomal.cc/posts/d739261b.html)
 
 ## 文章双栏
 
 在店长的教程上做了一点自己的修改
 
-{% link 双栏布局首页卡片魔改教程,Akilarの糖果屋,https://akilar.top/posts/d6b69c49/ %}
+[双栏布局首页卡片魔改教程](https://akilar.top/posts/d6b69c49/)
 
 替换 `[themes]\butterfly\layout\includes\mixins\post-ui.pug` 为下面代码（用的是店长的，删减了一些东西）
 
@@ -801,19 +798,17 @@ mixin postUI(posts)
 
 ## 信息卡片头像状态
 
-{% link 博客魔改教程总结(四),Fomalhaut,https://www.fomal.cc/posts/d739261b.html %}
+[博客魔改教程总结(四)](https://www.fomal.cc/posts/d739261b.html)
 
 ## Nav 导航栏修改
 
-{% note info simple %}
-
-- 2024-8-28 更新
-  原本的样式有问题，无法居中，扒了一下鱼佬的导航栏，重新改了一版
-  {% endnote %}
+::alert{type="question"}
+原本的样式有问题，无法居中，扒了一下鱼佬的导航栏，重新改了一版
+::
 
 部分来自于
 
-{% link 关于Butterfly的导航栏的一些教程,Ariasaka,https://blog.yaria.top/posts/895003b5/ %}
+[关于Butterfly的导航栏的一些教程](https://blog.yaria.top/posts/895003b5/)
 
 - 分离搜索栏与菜单栏
 - 子菜单横向布局
@@ -857,10 +852,10 @@ document.addEventListener("DOMContentLoaded", tonav);
 
 function tonav() {
   function up() {
-    document.querySelector("#name-container").style.transform =
-      "translate(-50%, 60px)";
-    document.querySelector("#nav .menus_items").style.transform =
-      "translateY(0)";
+    document.querySelector("#name-container").style.transform
+      = "translate(-50%, 60px)";
+    document.querySelector("#nav .menus_items").style.transform
+      = "translateY(0)";
     document.querySelector("#menuTitleBox").style.zIndex = "-1";
   }
 
@@ -872,7 +867,8 @@ function tonav() {
     const pageNameElement = document.getElementById("page-name");
     if (pageNameElement) {
       pageNameElement.innerText = document.title.split(" | 鹊楠の小窝")[0];
-    } else {
+    }
+ else {
       // 使用 MutationObserver 监听 DOM 变化，确保元素加载后更新标题
       const observer = new MutationObserver((mutations, observer) => {
         const pageNameElement = document.getElementById("page-name");
@@ -889,18 +885,19 @@ function tonav() {
 
   up();
 
-  var position = window.scrollY;
+  let position = window.scrollY;
 
   window.addEventListener("scroll", function () {
-    var scroll = window.scrollY;
+    let scroll = window.scrollY;
 
     if (scroll > position) {
-      document.querySelector("#name-container").style.transform =
-        "translate(-50%, 0)";
-      document.querySelector("#nav .menus_items").style.transform =
-        "translateY(-60px)";
+      document.querySelector("#name-container").style.transform
+        = "translate(-50%, 0)";
+      document.querySelector("#nav .menus_items").style.transform
+        = "translateY(-60px)";
       document.querySelector("#menuTitleBox").style.zIndex = "1";
-    } else {
+    }
+ else {
       up();
     }
 
@@ -1156,8 +1153,7 @@ function tonav() {
 
 /* Nav导航栏 */
 ```
-
-{% folding , 以前的版本 %}
+::folding{title="旧版本"}
 修改 `[themes]\butterfly\layout\includes\header\nav.pug`
 
 ```diff
@@ -1177,8 +1173,8 @@ document.addEventListener("DOMContentLoaded", tonav);
 
 function up() {
   document.querySelector("#name-container").style.top = "60px";
-  document.querySelector("#nav.hide-menu .menus_items").style.transform =
-    "translateY(0)";
+  document.querySelector("#nav.hide-menu .menus_items").style.transform
+    = "translateY(0)";
   document.querySelector("#menuTitleBox").style.zIndex = "-1";
 }
 
@@ -1189,17 +1185,18 @@ function scrollToTop() {
 function tonav() {
   up();
 
-  var position = window.scrollY;
+  let position = window.scrollY;
 
   window.addEventListener("scroll", function () {
-    var scroll = window.scrollY;
+    let scroll = window.scrollY;
 
     if (scroll > position) {
       document.querySelector("#name-container").style.top = "0";
-      document.querySelector("#nav.hide-menu .menus_items").style.transform =
-        "translateY(-60px)";
+      document.querySelector("#nav.hide-menu .menus_items").style.transform
+        = "translateY(-60px)";
       document.querySelector("#menuTitleBox").style.zIndex = "1";
-    } else {
+    }
+ else {
       up();
     }
 
@@ -1212,8 +1209,8 @@ function tonav() {
       scrollToTop();
     });
 
-  document.getElementById("page-name").innerText =
-    document.title.split(" | 鹊楠の小窝")[0];
+  document.getElementById("page-name").innerText
+    = document.title.split(" | 鹊楠の小窝")[0];
 }
 ```
 
@@ -1486,13 +1483,13 @@ function tonav() {
 /* Nav导航栏 */
 ```
 
-{% endfolding %}
+::
 
 ## 首页分类磁贴
 
 使用的是小冰大佬的插件
 
-{% link 教程：hexo-magnet 插件 1.0,しゅふがく,https://zfe.space/post/hexo-magnet.html %}
+[教程：hexo-magnet 插件 1.0](https://zfe.space/post/hexo-magnet.html)
 
 其中深色模式适配我是用了 css 变量
 
@@ -1524,9 +1521,9 @@ color_setting:
 
 参考
 
-{% link 博客魔改日记（3）,Ariasaka,https://blog.yaria.top/posts/670e47f/ %}
+[博客魔改日记（3）](https://blog.yaria.top/posts/670e47f/)
 
-{% link Butterfly轮播图Swiper,June,https://blog.june-pj.cn/posts/811bada5 %}
+[Butterfly轮播图Swiper](https://blog.june-pj.cn/posts/811bada5)
 
 再加上自己微调
 
@@ -1557,7 +1554,7 @@ color_setting:
 
 参考
 
-{% link 本站的一些样式魔改,ichika,https://ichika.cc/Article/beautiful_MyBeautiful %}
+[本站的一些样式魔改](https://ichika.cc/Article/beautiful_MyBeautiful)
 
 自己修改的 css:
 
@@ -1756,14 +1753,15 @@ color_setting:
 
 /* 归档、标签、分类页 end */
 ```
-
-{% note warning simple %}踩了个坑，归档页显示标签（tags）要在配置文件开启，浪费了我好多时间 😭😭{% endnote %}
+::alert{type="question"}
+踩了个坑，归档页显示标签（tags）要在配置文件开启，浪费了我好多时间 😭😭
+::
 
 ### 分类
 
 只参考了一下 meuicat 大佬的页面，css 是自己手搓的 {% psw 绝对不是因为懒得改变量 (确信) %}
 
-{% link 文章分类,亦小封,https://meuicat.com/categories/ %}
+[文章分类](https://meuicat.com/categories/)
 
 ```css
 /* 分类 */
@@ -1837,8 +1835,9 @@ color_setting:
 
 ### 标签
 
-{% note info simple %}
+::alert{type="warning"}
 如果标签页的标签没有数字的话看这里
+::
 
 修改 `[themes]\butterfly\scripts\helpers\page.js`
 
@@ -1855,8 +1854,7 @@ color_setting:
   })
   return result
 ```
-
-{% endnote %}
+---
 
 ```css
 /* 标签 */
@@ -1963,7 +1961,7 @@ abbrlink:
 
 参考
 
-{% link 猹的魔改日记-小小的重写个页脚,贰猹,https://noionion.top/46524.html %}
+[猹的魔改日记-小小的重写个页脚](https://noionion.top/46524.html)
 
 我的 `footer.pug` 和 `footer.styl`
 
@@ -2225,7 +2223,8 @@ window.addEventListener("scroll", function () {
   let scrollPercentage = scrollTop / thresholdHeight;
   if (scrollPercentage > 1) {
     scrollPercentage = 1;
-  } else if (scrollPercentage < 0) {
+  }
+ else if (scrollPercentage < 0) {
     scrollPercentage = 0;
   }
 
@@ -2285,7 +2284,7 @@ window.addEventListener("scroll", function () {
 
 参考
 
-{% link butterfly文章顶部添加波浪效果,安知鱼,https://blog.anheyu.com/posts/98c4.html %}
+[butterfly文章顶部添加波浪效果](https://blog.anheyu.com/posts/98c4.html)
 
 ## 搜索时滚动条消失恢复
 
@@ -2319,7 +2318,7 @@ window.addEventListener('load', () => {
 
 cdn 大部分来自 Heo 佬
 
-{% link Butterfly CDN链接更改指南，替换jsdelivr提升访问速度,张洪Heo,https://blog.zhheo.com/p/790087d9.html %}
+[Butterfly CDN链接更改指南，替换jsdelivr提升访问速度](https://blog.zhheo.com/p/790087d9.html)
 
 我的 option
 
@@ -2384,17 +2383,17 @@ option:
 
 ## 那年今日
 
-{% link 基于 butterfly 主题的历史上的今天 2.0 重置版,しゅふがく,https://zfe.space/post/history-card.html %}
+[基于 butterfly 主题的历史上的今天 2.0 重置版](https://zfe.space/post/history-card.html)
 
 ## 点击文章卡片进入文章页
 
 参考
 
-{% link Butterfly给首页首个文章添加class,June,https://blog.june-pj.cn/posts/e8d2f03e/ %}
+[Butterfly给首页首个文章添加class](https://blog.june-pj.cn/posts/e8d2f03e/)
 
-{% link 子级a标签href避免触发父级onclick的方法，子元素阻止冒泡,张洪Heo,https://blog.zhheo.com/p/74ebf458.html %}
+[子级a标签href避免触发父级onclick的方法，子元素阻止冒泡](https://blog.zhheo.com/p/74ebf458.html)
 
-{% folding open, 看不懂的看这里 %}
+::folding{title="看不懂的点这里"}
 
 修改 `[themes]\butterfly\layout\includes\mixins\post-ui.pug` :
 
@@ -2437,27 +2436,11 @@ if (theme.post_meta.page.tags && article.tags.data.length > 0)
         span.article-meta-link #[='•']
 ```
 
-{% endfolding %}
+::
 
 ## 外挂标签之折叠栏
 
 店长的外挂标签里的折叠栏不是很喜欢，因为用的是 `details` 元素实现的，没有过渡动画，所以就自己重写了一下源码和样式
-
-{% folding, 展示 %}
-
-{% folding open, 默认打开 %}
-
-内容
-
-{% endfolding %}
-
-{% folding, 默认关闭 %}
-
-内容
-
-{% endfolding %}
-
-{% endfolding %}
 
 示例代码 (其实和店长的没啥区别，就是少了个颜色的选项)
 
@@ -2491,7 +2474,8 @@ function postFolding(args, content) {
   if (args.length > 1) {
     style = args[0].trim();
     title = args[1].trim();
-  } else if (args.length > 0) {
+  }
+ else if (args.length > 0) {
     title = args[0].trim();
   }
   if (style != undefined) {
@@ -2504,7 +2488,8 @@ function postFolding(args, content) {
                 .join("")}
               </div>
             </div>`;
-  } else {
+  }
+ else {
     return `<div class="details">
               <div class="collapsible"> ${title} </div>
               <div class="content">
@@ -2612,12 +2597,12 @@ hexo.extend.tag.register("folding", postFolding, { ends: true });
 
 ```js
 document.querySelectorAll(".collapsible").forEach((button) => {
-  var heightTimeOut;
+  let heightTimeOut;
   button.addEventListener("click", function () {
     const details = this.parentElement;
     const content = details.querySelector(".content");
-    const contentTranTime =
-      parseFloat(window.getComputedStyle(content).transitionDuration) * 1000;
+    const contentTranTime
+      = Number.parseFloat(window.getComputedStyle(content).transitionDuration) * 1000;
 
     // 切换 open 属性
     if (details.hasAttribute("open")) {
@@ -2630,7 +2615,8 @@ document.querySelectorAll(".collapsible").forEach((button) => {
         details.removeAttribute("open");
         content.style.height = 0 + "px"; // 收起时，重置 max-height
       }, 1);
-    } else {
+    }
+ else {
       details.setAttribute("open", "");
       content.style.height = content.scrollHeight + "px"; // 展开时，设置 max-height 为内容高度
       heightTimeOut = setTimeout(() => {
@@ -2659,7 +2645,7 @@ document.querySelectorAll(".details[open]").forEach((details) => {
 
 浮杨佬说说的项目地址
 
-{% link,floatsheep,https://www.npmjs.com/package/hexo-butterfly-statictalk %}
+[floatsheep](https://www.npmjs.com/package/hexo-butterfly-statictalk)
 
 ### 正常插件安装版
 
@@ -2673,41 +2659,42 @@ npm install hexo-butterfly-statictalk
 
 这个是我自己改给自己用的，舍弃掉了自动生成时间，可能不是那么好看和好用，可以自己改改
 
-{% folding ,2024/9/2 更新 %}
+::folding{title="2024/9/2 更新"}
 
 **修复 bug**
 
 ```js
 function arrangeItems() {
-  var container = document.querySelector("#talk-container");
-  var items = document.querySelectorAll(".talk-wrapper");
+  let container = document.querySelector("#talk-container");
+  let items = document.querySelectorAll(".talk-wrapper");
 
   if (container && items) {
-    var containerWidth = container.clientWidth;
-    var columns = 3; // 默认列数
+    let containerWidth = container.clientWidth;
+    let columns = 3; // 默认列数
 
     if (containerWidth <= 768) {
       columns = 1; // 窗口宽度 <= 768px 时为单列布局
-    } else if (containerWidth <= 1000) {
+    }
+ else if (containerWidth <= 1000) {
       columns = 2; // 窗口宽度 <= 1000px 时为双列布局
     }
 
-    var columnHeights = Array(columns).fill(0); // 初始化每列高度为0
-    var columnWidth = containerWidth / columns; // 计算每列宽度
-    var margin = 20; // 间隔
+    let columnHeights = new Array(columns).fill(0); // 初始化每列高度为0
+    let columnWidth = containerWidth / columns; // 计算每列宽度
+    let margin = 20; // 间隔
 
     // 从后往前遍历 items
-    for (var i = items.length - 1; i >= 0; i--) {
-      var item = items[i];
-      var itemHeight = item.offsetHeight;
+    for (let i = items.length - 1; i >= 0; i--) {
+      let item = items[i];
+      let itemHeight = item.offsetHeight;
 
-      var minHeight = Math.min(...columnHeights); // 获取最短列的高度
-      var minIndex = columnHeights.indexOf(minHeight); // 获取最短列的索引
+      let minHeight = Math.min(...columnHeights); // 获取最短列的高度
+      let minIndex = columnHeights.indexOf(minHeight); // 获取最短列的索引
 
-      var translateX = minIndex * columnWidth;
-      var translateY = minHeight;
+      let translateX = minIndex * columnWidth;
+      let translateY = minHeight;
 
-      var isLastColumn = minIndex === columns - 1;
+      let isLastColumn = minIndex === columns - 1;
 
       item.style.transform = `translate(${translateX}px, ${translateY}px)`;
       item.style.width = isLastColumn
@@ -2718,8 +2705,9 @@ function arrangeItems() {
     }
 
     container.style.height = `${Math.max(...columnHeights)}px`;
-  } else {
-    return;
+  }
+ else {
+
   }
 }
 
@@ -2737,7 +2725,7 @@ document.addEventListener("pjax:complete", todo);
 document.addEventListener("DOMContentLoaded", todo);
 ```
 
-{% endfolding %}
+::
 
 新建 `talk` 页面
 
@@ -2874,36 +2862,37 @@ if site.data.talk
 
 ```js
 function arrangeItems() {
-  var container = document.querySelector("#talk-container");
-  var items = document.querySelectorAll(".talk-wrapper");
+  let container = document.querySelector("#talk-container");
+  let items = document.querySelectorAll(".talk-wrapper");
 
   if (container && items) {
-    var columns = 3; // 默认列数
-    var containerWidth = container.clientWidth;
+    let columns = 3; // 默认列数
+    let containerWidth = container.clientWidth;
 
     if (containerWidth <= 768) {
       columns = 1; // 窗口宽度 <= 768px 时为单列布局
-    } else if (containerWidth <= 1000) {
+    }
+ else if (containerWidth <= 1000) {
       columns = 2; // 窗口宽度 <= 1000px 时为双列布局
     }
 
-    var columnHeights = Array(columns).fill(0); // 初始化每列高度为0
-    var columnWidth = containerWidth / columns; // 计算每列宽度
-    var margin = 20; // 间隔
+    let columnHeights = new Array(columns).fill(0); // 初始化每列高度为0
+    let columnWidth = containerWidth / columns; // 计算每列宽度
+    let margin = 20; // 间隔
 
     items.forEach((item, index) => {
       // 获取当前元素的高度
-      var itemHeight = item.offsetHeight;
+      let itemHeight = item.offsetHeight;
 
-      var minHeight = Math.min(...columnHeights); // 获取最短列的高度
-      var minIndex = columnHeights.indexOf(minHeight); // 获取最短列的索引
+      let minHeight = Math.min(...columnHeights); // 获取最短列的高度
+      let minIndex = columnHeights.indexOf(minHeight); // 获取最短列的索引
 
       // 计算transform位置
-      var translateX = minIndex * columnWidth;
-      var translateY = minHeight;
+      let translateX = minIndex * columnWidth;
+      let translateY = minHeight;
 
       // 判断是否为最后一列
-      var isLastColumn = minIndex === columns - 1;
+      let isLastColumn = minIndex === columns - 1;
 
       // 设置transform位置
       item.style.transform = `translate(${translateX}px, ${translateY}px)`;
@@ -2917,8 +2906,9 @@ function arrangeItems() {
 
     // 更新容器的高度以适应所有列
     container.style.height = `${Math.max(...columnHeights)}px`;
-  } else {
-    return;
+  }
+ else {
+
   }
 }
 
@@ -2951,11 +2941,11 @@ bottom:
     # test1
     ![](https://tuchuang.voooe.cn/images/2024/06/19/MUICanvas.webp)
     ![](https://tuchuang.voooe.cn/images/2024/06/19/InstallDolby.webp)
-  time: "2024-09-01"
+  time: 2024-09-01
 - content: |
     2
     # test1
-  time: "2024-09-01"
+  time: 2024-09-01
 ```
 
 ## 关于我
@@ -2965,7 +2955,7 @@ bottom:
 - 删除捐赠 ~~楠的破烂博客还敢开捐赠？！~~
 - 修改 51LA 的统计数据为 Hexo 自带数据
 
-{% link butterfly魔改关于页面,安知鱼,https://blog.anheyu.com/posts/e62b.html %}
+[butterfly魔改关于页面](https://blog.anheyu.com/posts/e62b.html)
 
 ### 统计数据部分
 
@@ -2992,19 +2982,19 @@ bottom:
 
 来自杜老师的教程
 
-{% link 杜老师自建国内不蒜子统计平台,Teacher Du,https://dusays.com/476/ %}
+[杜老师自建国内不蒜子统计平台](https://dusays.com/476/)
 
 ## 压缩静态资源
 
 来自 空梦大佬
 
-{% link 网站加载速度优化方案总结,空梦,https://kmar.top/posts/7d9fb37e/ %}
+[网站加载速度优化方案总结](https://kmar.top/posts/7d9fb37e/)
 
 ## Todo
 
-自己用 md 写的太丑辣，懒得动脑，直接拿 亦小封 佬的用
+自己用 md 写的太丑辣，懒得动脑，直接拿 **亦小封** 佬的用
 
-{% link Butterfly的魔改教程：待办清单,亦小封,https://meuicat.com/blog/76/index.html %}
+[Butterfly的魔改教程：待办清单](https://meuicat.com/blog/76/index.html)
 
 不过佬的瀑布流代码在我这里有点小问题，我就用我自己的屎山代码代替了））
 
@@ -3030,9 +3020,9 @@ function link(args) {
     : "❗这是个站外网站呢，不保证站点的可用性和安全性哟~";
   let imgUrl = isLocalLink
     ? "https://tuchuang.voooe.cn/images/2024/01/29/logo_icon.png"
-    : "https://api.iowen.cn/favicon/" +
-      link.replace(/^https?\:\/\//i, "") +
-      ".png";
+    : "https://api.iowen.cn/favicon/"
+    	+ link.replace(/^https?:\/\//i, "")
+    	+ ".png";
 
   let targetAttr = isLocalLink ? "" : 'target="_blank"';
 

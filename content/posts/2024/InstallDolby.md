@@ -1,12 +1,9 @@
 ---
 title: 免费安装杜比全景声
-tags:
-  - 软件
-  - 音效
-categories:
-  - 软件
-cover: 'https://tuchuang.voooe.cn/images/2024/06/19/InstallDolby.webp'
-abbrlink: 1dfc6ea9
+tags: [软件]
+categories: [经验分享]
+image: "https://tuchuang.voooe.cn/images/2024/06/19/InstallDolby.webp"
+description: 这篇文章将教你如何安装杜比全景声
 date: 2024-04-03 11:09:28
 ---
 
@@ -15,7 +12,12 @@ date: 2024-04-03 11:09:28
 工具地址：[酸奶会发光](https://fpsplay.github.io/)
 作者的视频教程
 
-<iframe src="//player.bilibili.com/player.html?aid=602908112&bvid=BV11B4y137cf&cid=1143612800&p=1" frameborder="no" scrolling="no" width="95%" height="600"> </iframe>
+::video-embed
+---
+type: bilibili
+id: BV11B4y137cf
+---
+::
 
 ## 安装驱动
 
@@ -24,7 +26,11 @@ date: 2024-04-03 11:09:28
 3. 点击 **Next**
 4. 点击 `Add or Remove Features`
 5. 勾选如下驱动（不需要 DTS 可以不勾选）
-   ![1](https://tuchuang.voooe.cn/images/2024/04/03/1.webp)
+   ::pic
+   ---
+   src: https://tuchuang.voooe.cn/images/2024/04/03/1.webp
+   ---
+   ::
 6. 点击 **Next**
 7. 点击 **Install** 安装
 
@@ -32,13 +38,29 @@ date: 2024-04-03 11:09:28
 
 1. 进入第二个 **音效配置**
 2. 点击顶部的 **Endpoints** 选择自己要安装的扬声器，如只是给扬声器安装，找到带有 **[Active]** 字样的即可
-   ![2](https://tuchuang.voooe.cn/images/2024/04/03/2.webp)
+   ::pic
+   ---
+   src: https://tuchuang.voooe.cn/images/2024/04/03/2.webp
+   ---
+   ::
 3. 先点击 **Backup** 备份
-   ![3](https://tuchuang.voooe.cn/images/2024/04/03/3.webp)
+   ::pic
+   ---
+   src: https://tuchuang.voooe.cn/images/2024/04/03/3.webp
+   ---
+   ::
 4. 点击 **Product Config Tool**
-   ![4](https://tuchuang.voooe.cn/images/2024/04/03/4.webp)
+   ::pic
+   ---
+   src: https://tuchuang.voooe.cn/images/2024/04/03/4.webp
+   ---
+   ::
 5. 点击 **Products** 选择 **Dolby DAX3 UWP (DAPv251-VLLDP120)**
-   ![5](https://tuchuang.voooe.cn/images/2024/04/03/5.webp)
+   ::pic
+   ---
+   src: https://tuchuang.voooe.cn/images/2024/04/03/5.webp
+   ---
+   ::
 6. 最后点击 **Apply Product Settings to Selected Endpoints** 应用
 
 ## 安装杜比全景声软件

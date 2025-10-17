@@ -1,19 +1,15 @@
 ---
 title: Jsdelivr与渺软CDN使用笔记
-categories:
-  - [博客]
-  - [笔记]
-tags:
-  - CDN
-  - 笔记
-  - 渺软
+categories: [经验分享]
+tags: [cdn]
 description: 为健忘的我写一条使用笔记
-cover: "https://tuchuang.voooe.cn/images/2024/06/19/MRCDN.webp"
-abbrlink: 171ff1e4
+image: "https://tuchuang.voooe.cn/images/2024/06/19/MRCDN.webp"
 date: 2024-02-06 01:00:00
 ---
 
-> 因为 `Jsdelivr` 国内备案无了，所以使用渺软 CDN 来回源 Jsdelivr
+::alert
+因为 `Jsdelivr` 国内备案无了，所以使用渺软 CDN 来回源 Jsdelivr
+::
 
 ## Jsdelivr 使用
 
@@ -41,10 +37,10 @@ Jsdelivr 链接：`https://cdn.jsdelivr.net/gh/GitHub用户名/仓库名@分支(
         "throttled": false,
         "providers": {
           "CF": true,
-          "FY": true
-        }
-      }
-    }
+          "FY": true,
+        },
+      },
+    },
   }
   ```
 

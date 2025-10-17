@@ -1,13 +1,9 @@
 ---
 title: 基于Tg的说说
-tags:
-  - 博客
-  - 说说
-  - Butterfly
-categories:
-  - [博客]
-  - [说说]
-cover: "https://tuchuang.voooe.cn/images/2024/06/19/tgtalk.webp"
+tags: [博客, Hexo, 说说]
+categories: [代码]
+image: "https://tuchuang.voooe.cn/images/2024/06/19/tgtalk.webp"
+description: 这篇文章讲述了如何安装基于Telegram的说说页面
 date: 2024-03-29 11:33:18
 ---
 
@@ -18,27 +14,37 @@ date: 2024-03-29 11:33:18
 项目起源于 [ChenYFan](https://github.com/ChenYFan)
 项目地址：
 
-{% link TGTalk FrontEnd,FloatSheep,https://github.com/FloatSheep/tgtalk-frontend %}
+::link-card
+---
+icon: https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg
+title: TGTalk FrontEnd
+link: https://github.com/FloatSheep/tgtalk-frontend
+---
+::
 
 我的 butterfly 分支：
 
-{% link tgtalk-frontend-butterfly,鹊楠,https://github.com/QNquenan/tgtalk-frontend-butterfly %}
+::link-card
+---
+icon: https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg
+title: tgtalk-frontend-butterfly
+link: https://github.com/QNquenan/tgtalk-frontend-butterfly
+---
+::
 
 <br />
 
-{% note info simple %}下列教程基本超搬 [TGTalk FrontEnd](https://github.com/FloatSheep/tgtalk-frontend) {% endnote %}
+::alert{type="question"}
+下列教程基本超搬 [TGTalk FrontEnd](https://github.com/FloatSheep/tgtalk-frontend)
+::
 
-{% folding open, 更新日志 %}
+::folding{open title="更新日志"}
 
-{% timeline ,pink %}
-
-<!-- timeline 2024-4-2 -->
-
+:::timeline
+{2024-4-2}
 1. 更新 `css` ，修改图片大小
-   <!-- endtimeline -->
-   {% endtimeline %}
-
-{% endfolding %}
+:::
+::
 
 ## 创建频道
 
@@ -57,11 +63,16 @@ date: 2024-03-29 11:33:18
 3. 在右侧选择 **Workers 和 Pages** => **概叙** => **创建应用程序**
 4. 点击 **创建 Worker** => **修改名称(名称随意)** => **部署** => **编辑代码**
 5. 在其中粘贴所有复制的代码，修改 `ChannelName` 为 Tg 频道名称，点击 **部署** 并访问 **Worker** 查看是否能正确返回内容
-   {% note warning modern %} 如果不能返回内容，请将 `nextBefore` 一行更改为 `Number((getDataFromTelegram.match(/data-before="([0-9]+)"/g) || ["0"])[0].match(/[0-9]+/g))` {% endnote %}
+
+::alert{type="question"}
+如果不能返回内容，请将 `nextBefore` 一行更改为 `Number((getDataFromTelegram.match(/data-before="([0-9]+)"/g) || ["0"])[0].match(/[0-9]+/g))`
+::
 
 ## API 绑定域名
 
-{% note danger modern %} 貌似需要域名 DNS 在 CF {% endnote %}
+::alert{type="question"}
+貌似需要域名 DNS 在 CF
+::
 
 1. 点击域名，进入域名管理界面
 2. 右侧点击 **DNS** ，新建解析

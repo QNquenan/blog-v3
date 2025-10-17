@@ -1,23 +1,19 @@
 ---
 title: 代码块展开关闭动画
-tags:
-  - 博客
-  - 代码块
-  - Butterfly
-categories:
-  - - 博客
-  - - 美化
-cover: "https://pic1.imgdb.cn/item/68c181d358cb8da5c898bb32.png"
-abbrlink: d6e47f4c
+tags: [Hexo, 博客]
+categories: [代码]
+image: "https://pic1.imgdb.cn/item/68c181d358cb8da5c898bb32.png"
+description: 这篇文章描述了如何在Butterfly中实现代码展开关闭动画
 date: 2025-02-26 15:07:37
 ---
 
-咕咕了很久啊，终于找到时间把这个小功能搓出来了
-
 ## 代码
 
-{% folding, 初版，使用了js %}
+::folding
+#title
+初版，使用了js
 
+#default
 ```js
 document.addEventListener("pjax:complete", tonav);
 document.addEventListener("DOMContentLoaded", tonav);
@@ -41,7 +37,8 @@ function tonav() {
           setTimeout(() => {
             table.style.maxHeight = tabBodyHeight + "px";
           }, 1);
-        } else {
+        }
+ else {
           table.style.maxHeight = tabBodyHeight + "px";
 
           setTimeout(() => {
@@ -55,7 +52,7 @@ function tonav() {
 
 新建一个 **js 文件**，引入就行了
 
-{% endfolding %}
+::
 
 ### 纯 css 实现版
 
@@ -63,7 +60,7 @@ function tonav() {
 
 先进入 `[themes]\butterfly\source\css\_highlight\highlight.styl` 把默认样式注释掉
 
-```style
+```style [[themes]\butterfly\source\css\_highlight\highlight.styl]
       &.expand-done
         & > i
           transform: rotate(180deg)
@@ -71,7 +68,6 @@ function tonav() {
         // & + table,
         // & + pre
         //   margin-bottom: 1.8em
-
 
       // &:not(.expand-done)
       //   & ~ table,

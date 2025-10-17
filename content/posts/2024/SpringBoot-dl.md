@@ -1,16 +1,11 @@
 ---
 title: SpringBootのPost登录注册
-categories:
-  - [Java]
-  - [SpringBoot]
-swiper_index: 1
-tags:
-  - SpringBoot
-  - Java
+categories: [代码]
+tags: [SpringBoot]
 description: SpringBootのPost登录注册案例笔记
-cover: "https://tuchuang.voooe.cn/images/2024/06/19/SpringBoot.webp"
-abbrlink: a28f30b4
+image: "https://tuchuang.voooe.cn/images/2024/06/19/SpringBoot.webp"
 date: 2024-02-04 03:08:13
+recommend: true
 ---
 
 ## 前言
@@ -18,25 +13,6 @@ date: 2024-02-04 03:08:13
 > 本文参考并根据最新版本修改于 [快速上手 Springboot 项目（登录注册保姆级教程）](https://blog.csdn.net/weixin_44043758/article/details/118367899)
 >
 > **注意事项**：所有示例代码建议手敲一遍，因为有一些导入语句（import）会自动补全生成，而复制粘贴不会，所以若复制粘贴则记得复制导入语句
-
-{% folding open, 更新日志 %}
-
-{% timeline ,pink %}
-
-<!-- timeline 2024-2-26 -->
-
-添加新建数据表教程
-
-<!-- endtimeline -->
-<!-- timeline 2024-2-22 -->
-
-修改 [实现 UserController](https://www.quenan.cn/posts/51385.html#%E5%AE%9E%E7%8E%B0UserController) 中的登陆功能，由 **从参数中获取账号密码** 改为 **从请求体中获取账号密码**
-
-<!-- endtimeline -->
-
-{% endtimeline %}
-
-{% endfolding %}
 
 ## 创建项目
 
@@ -683,7 +659,7 @@ date: 2024-02-04 03:08:13
    ```json
    {
      "username": "test4",
-     "password": "123456"
+     "password": "123456",
    }
    ```
 
@@ -698,8 +674,8 @@ date: 2024-02-04 03:08:13
        "data": {
          "uid": 4,
          "username": "test04",
-         "password": ""
-       }
+         "password": "",
+       },
      }
      ```
 
@@ -709,7 +685,7 @@ date: 2024-02-04 03:08:13
      {
        "code": "501",
        "msg": "用户名已存在",
-       "data": null
+       "data": null,
      }
      ```
 
@@ -732,8 +708,8 @@ date: 2024-02-04 03:08:13
        "data": {
          "uid": 1,
          "username": "test01",
-         "password": ""
-       }
+         "password": "",
+       },
      }
      ```
 
@@ -743,6 +719,6 @@ date: 2024-02-04 03:08:13
      {
        "code": "500",
        "msg": "账号或密码错误",
-       "data": null
+       "data": null,
      }
      ```

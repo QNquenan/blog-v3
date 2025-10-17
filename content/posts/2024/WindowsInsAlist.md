@@ -1,16 +1,11 @@
 ---
 title: Windows安装alist并美化
-tags:
-  - alist
-  - windows
-  - 美化
-categories:
-  - [前端]
-  - [美化]
-  - [软件]
-cover: "https://tuchuang.voooe.cn/images/2024/06/19/WindowsInsAlist.webp"
-abbrlink: 67ef0433
+tags: [Windows, Alist]
+categories: [经验分享]
+image: "https://tuchuang.voooe.cn/images/2024/06/19/WindowsInsAlist.webp"
+description: 这篇文章描述了如何在Windows系统安装并美化 AList
 date: 2024-04-19 11:21:38
+recommend: true
 ---
 
 ## 前言
@@ -37,7 +32,7 @@ date: 2024-04-19 11:21:38
 
 5. 默认访问地址是 [127.0.0.1:5244](127.0.0.1:5244)
 
-{% folding ,配置开机自启 %}
+::folding{title="配置开机自启"}
 
 > 此处使用知乎大佬 [遮羽](https://zhuanlan.zhihu.com/p/586155507) 的 vbs 代码
 >
@@ -48,7 +43,7 @@ Set ws = CreateObject("Wscript.Shell")
 ws.run "cmd /c .\alist.exe server",vbhide
 ```
 
-{% endfolding %}
+::
 
 ## 美化
 
