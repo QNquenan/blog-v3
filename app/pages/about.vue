@@ -27,7 +27,7 @@ const skills = [
 const hobbies = [
 	{ name: '阅读', icon: 'ph:book-bold' },
 	{ name: '音乐', icon: 'ph:music-note-bold' },
-	{ name: '旅行', icon: 'ph:airplane-tilt-bold' },
+	{ name: '羽毛球', icon: 'icon-park-twotone:badminton' },
 	{ name: '摄影', icon: 'ph:camera-bold' },
 	{ name: '编程', icon: 'ph:code-bold' },
 	{ name: '游戏', icon: 'ph:game-controller-bold' },
