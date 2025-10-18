@@ -155,7 +155,7 @@ export default [
 				avatar: 'https://wsrv.nl/?url=github.com%2FFloatSheep.png%3Fsize=92',
 				archs: ['Hugo', 'Cloudflare'],
 				date: '2025-10-16',
-				comment: '',
+				comment: '一只🐑，超厉害',
 			},
 			{
 				author: 'HiPeach',
