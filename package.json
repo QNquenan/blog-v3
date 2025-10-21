@@ -25,6 +25,7 @@
     "check:feed/all": "tsx scripts/framework/check-all-feeds.ts"
   },
   "dependencies": {
+    "@microsoft/clarity": "^1.0.0",
     "@nuxt/content": "catalog:content",
     "@nuxt/icon": "catalog:ui",
     "@nuxt/image": "catalog:ui",

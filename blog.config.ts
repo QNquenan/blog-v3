@@ -68,8 +68,10 @@ const blogConfig = {
 	scripts: [
 		// Twikoo 评论系统
 		{ src: 'https://lib.baomitu.com/twikoo/1.6.44/twikoo.min.js', defer: true },
-		// Microsoft Clarity 追踪代码
-		{ src: 'https://www.clarity.ms/tag/trmlqvobd9', type: 'text/javascript', async: true },
+		// Microsoft Clarity 用户行为分析系统
+		// 使用前请先到 https://clarity.microsoft.com/ 创建项目并获取项目ID
+		// 然后取消下面一行的注释并替换 YOUR_CLARITY_PROJECT_ID 为实际的项目ID
+		{ src: 'https://www.clarity.ms/tag/trmlqvobd9', defer: true },
 	],
 
 	/** 自己部署的 Twikoo 服务 */
