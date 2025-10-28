@@ -2,7 +2,7 @@
 title: 代码块展开关闭动画
 tags: [Hexo, 博客]
 categories: [代码]
-image: "https://pic1.imgdb.cn/item/68c181d358cb8da5c898bb32.png"
+image: "https://pic1.imgdb.cn/item/6900bf9a3203f7be00ac9b95.webp"
 description: 这篇文章描述了如何在Butterfly中实现代码展开关闭动画
 date: 2025-02-26 15:07:37
 ---

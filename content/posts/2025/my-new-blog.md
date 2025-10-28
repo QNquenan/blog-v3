@@ -3,7 +3,7 @@ title: 我的新博客
 description: 讲述关于我的新博客的故事。
 date: 2025-10-16 19:41:46
 updated: 2025-10-16 19:41:46
-image: # 图片
+image: 'https://pic1.imgdb.cn/item/6900bf9a3203f7be00ac9b94.webp'
 categories: [经验分享]
 tags: [Blog, Vue]
 ---

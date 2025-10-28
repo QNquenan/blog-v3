@@ -3,7 +3,7 @@ title: 使用Nsis构建一个Electron应用安装包
 description: 关于如何使用Nsis构建一个Electron的安装包过程
 date: 2025-10-19 15:35:20
 updated: 2025-10-19 15:35:20
-image: # 图片
+image: 'https://pic1.imgdb.cn/item/6900bf9a3203f7be00ac9b93.webp'
 categories: [经验分享]
 tags: [打包, Electron]
 ---

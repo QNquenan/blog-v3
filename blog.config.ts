@@ -18,7 +18,7 @@ const basicConfig = {
 		name: '署名-非商业性使用-相同方式共享 4.0 国际',
 		url: 'https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans',
 	},
-	favicon: 'https://pic1.imgdb.cn/item/68f0ee56c5157e1a8879752c.png',
+	favicon: 'https://pic1.imgdb.cn/item/6900c4b13203f7be00ac9ded.png',
 	language: 'zh-CN',
 	timeEstablished: '2024-01-26',
 	timezone: 'Asia/Shanghai',
