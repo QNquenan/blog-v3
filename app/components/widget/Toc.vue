@@ -23,7 +23,10 @@ function hasActiveChild(entry: TocLink, activeId: string | null): boolean {
 			<Icon name="ph:arrow-circle-up-bold" />
 		</a>
 
-		<a href="#twikoo" aria-label="评论区">
+		<!-- <a href="#twikoo" aria-label="评论区">
+			<Icon name="ph:chat-circle-text-bold" />
+		</a> -->
+		<a href="#text-creative" aria-label="评论区">
 			<Icon name="ph:chat-circle-text-bold" />
 		</a>
 	</template>

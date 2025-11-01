@@ -10,5 +10,13 @@ declare global {
 			}) => void
 			version: string
 		}
+		Artalk?: {
+			init: (options: {
+				el: string
+				pageTitle: string
+				server: string
+				site: string
+			}) => void
+		}
 	}
 }
