@@ -1,48 +1,48 @@
 <script setup lang="ts">
-// const appConfig = useAppConfig()
-const colorMode = useColorMode()
+const appConfig = useAppConfig()
+// const colorMode = useColorMode()
 
 // 监听颜色模式变化
-watch(colorMode, () => {
-	const commentsEl = document.getElementById('Comments')
-	if (commentsEl) {
-		if (colorMode.value === 'dark') {
-			commentsEl.classList.add('atk-dark-mode')
-		}
-		else {
-			commentsEl.classList.remove('atk-dark-mode')
-		}
-	}
-})
+// watch(colorMode, () => {
+// 	const commentsEl = document.getElementById('Comments')
+// 	if (commentsEl) {
+// 		if (colorMode.value === 'dark') {
+// 			commentsEl.classList.add('atk-dark-mode')
+// 		}
+// 		else {
+// 			commentsEl.classList.remove('atk-dark-mode')
+// 		}
+// 	}
+// })
 
 onMounted(() => {
-	// window.twikoo?.init({
-	// 	envId: appConfig.twikoo?.envId,
-	// 	// twikoo 会把挂载后的元素变为 #twikoo
-	// 	el: '#twikoo',
-	// })
+	window.twikoo?.init({
+		envId: appConfig.twikoo?.envId,
+		// twikoo 会把挂载后的元素变为 #twikoo
+		el: '#twikoo',
+	})
 
 	// if (window.Artalk) {
-	window.Artalk?.init({
-		el: '#Comments',
-		pageTitle: '',
-		server: 'http://47.107.141.90:23366/',
-		site: '鹊楠の小窝',
-	})
+	// window.Artalk?.init({
+	// 	el: '#Comments',
+	// 	pageTitle: '',
+	// 	server: 'http://47.107.141.90:23366/',
+	// 	site: '鹊楠の小窝',
+	// })
 	// }
 
 	// 页面加载时读取存储的颜色模式状态，为 Artalk 添加暗色模式类
-	const commentsEl = document.getElementById('Comments')
-	if (commentsEl) {
-		if (colorMode.value === 'dark') {
-			setTimeout(() => {
-				commentsEl.classList.add('atk-dark-mode')
-			}, 300)
-		}
-		else {
-			commentsEl.classList.remove('atk-dark-mode')
-		}
-	}
+	// const commentsEl = document.getElementById('Comments')
+	// if (commentsEl) {
+	// 	if (colorMode.value === 'dark') {
+	// 		setTimeout(() => {
+	// 			commentsEl.classList.add('atk-dark-mode')
+	// 		}, 300)
+	// 	}
+	// 	else {
+	// 		commentsEl.classList.remove('atk-dark-mode')
+	// 	}
+	// }
 })
 </script>
 
@@ -54,11 +54,11 @@ onMounted(() => {
 
 	<br>
 
-	<!-- <div id="twikoo">
+	<div id="twikoo">
 		<p>评论加载中...</p>
-	</div> -->
+	</div>
 
-	<div id="Comments" />
+	<!-- <div id="Comments" /> -->
 </section>
 </template>
 
