@@ -72,14 +72,14 @@ const blogConfig = {
 		// 使用前请先到 https://clarity.microsoft.com/ 创建项目并获取项目ID
 		// 然后取消下面一行的注释并替换 YOUR_CLARITY_PROJECT_ID 为实际的项目ID
 		// { src: 'https://www.clarity.ms/tag/trmlqvobd9', defer: true },
-		// { src: 'https://cdn.jsdmirror.com/gh/QNquenan/Pub_bed@main/js/Artalk.js', defer: true },
+		{ src: 'https://quenan-atk.qyliu.top/dist/Artalk.js', defer: true },
 	],
 
 	/** 自己部署的 Twikoo 服务 */
-	twikoo: {
-		envId: 'https://twi.quenan.cn/',
-		preload: 'https://twi.quenan.cn/',
-	},
+	// twikoo: {
+	// 	envId: 'https://twi.quenan.cn/',
+	// 	preload: 'https://twi.quenan.cn/',
+	// },
 }
 
 /** 用于生成 OPML 和友链页面配置 */

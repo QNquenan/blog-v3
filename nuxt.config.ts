@@ -17,7 +17,7 @@ export default defineNuxtConfig({
 				{ name: 'msvalidate.01', content: '8BD3AF7E6650E1251EDEDF5CEB12AAC9' },
 			],
 			link: [
-				{ rel: 'stylesheet', href: 'https://cdn.jsdmirror.cn/gh/QNquenan/Pub_bed@main/css/Artalk.css' },
+				{ rel: 'stylesheet', href: 'https://quenan-atk.qyliu.top/dist/Artalk.css' },
 				{ rel: 'icon', href: blogConfig.favicon },
 				{ rel: 'alternate', type: 'application/atom+xml', href: '/atom.xml' },
 				// { rel: 'preconnect', href: blogConfig.twikoo.preload },
