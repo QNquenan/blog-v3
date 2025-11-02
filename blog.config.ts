@@ -72,7 +72,7 @@ const blogConfig = {
 		// 使用前请先到 https://clarity.microsoft.com/ 创建项目并获取项目ID
 		// 然后取消下面一行的注释并替换 YOUR_CLARITY_PROJECT_ID 为实际的项目ID
 		// { src: 'https://www.clarity.ms/tag/trmlqvobd9', defer: true },
-		{ src: 'https://quenan-atk.qyliu.top/dist/Artalk.js', defer: true },
+		// { src: 'https://quenan-atk.qyliu.top/dist/Artalk.js', defer: true },
 	],
 
 	/** 自己部署的 Twikoo 服务 */
