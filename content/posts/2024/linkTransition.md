@@ -3,7 +3,7 @@ title: 超链接动画样式
 categories: [代码]
 tags: [Css, 前端]
 description: 纯Css写的超链接的下划线动画样式练手
-image: "https://tuchuang.voooe.cn/images/2024/06/19/linkTransition.webp"
+image:
 date: 2024-03-15 14:59:48
 ---
 

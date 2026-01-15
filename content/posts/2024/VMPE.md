@@ -3,7 +3,7 @@ title: VM虚拟机进入Pe系统
 categories: [经验分享]
 tags: [虚拟机, Pe系统]
 description: VM虚拟机进入Pe系统笔记
-image: "https://tuchuang.voooe.cn/images/2024/06/19/VMPE.webp"
+image:
 date: 2024-02-21 22:11:25
 ---
 

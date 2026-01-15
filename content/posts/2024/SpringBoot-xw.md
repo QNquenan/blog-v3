@@ -3,7 +3,7 @@ title: SpringBootのGet请求新闻列表
 categories: [代码]
 tags: [SpringBoot]
 description: SpringBootのGet请求新闻列表案例笔记
-image: "https://tuchuang.voooe.cn/images/2024/06/19/SpringBoot.webp"
+image:
 date: 2024-02-05 20:30:00
 recommend: true
 ---

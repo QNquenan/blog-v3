@@ -2,7 +2,7 @@
 title: 用Xd画一个文章封面
 tags: [博客]
 categories: [经验分享]
-image: "https://tuchuang.voooe.cn/images/2024/06/19/usXd.webp"
+image:
 description: 这篇文章教你用xd画一个文章页面
 date: 2024-03-27 22:27:34
 ---

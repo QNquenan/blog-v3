@@ -3,7 +3,7 @@ title: Jsdelivr与渺软CDN使用笔记
 categories: [经验分享]
 tags: [cdn]
 description: 为健忘的我写一条使用笔记
-image: "https://tuchuang.voooe.cn/images/2024/06/19/MRCDN.webp"
+image:
 date: 2024-02-06 01:00:00
 ---
 

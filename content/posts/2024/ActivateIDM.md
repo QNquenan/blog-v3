@@ -3,7 +3,7 @@ title: IDM激活，理论永久
 tags: [软件分享]
 categories: [经验分享]
 description: 一行代码激活IDM
-image: "https://tuchuang.voooe.cn/images/2024/06/19/ActivateIDM.webp"
+image:
 date: 2024-02-27 12:55:35
 ---
 

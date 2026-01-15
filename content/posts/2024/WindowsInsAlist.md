@@ -2,7 +2,7 @@
 title: Windows安装alist并美化
 tags: [Windows, Alist]
 categories: [经验分享]
-image: "https://tuchuang.voooe.cn/images/2024/06/19/WindowsInsAlist.webp"
+image:
 description: 这篇文章描述了如何在Windows系统安装并美化 AList
 date: 2024-04-19 11:21:38
 recommend: true

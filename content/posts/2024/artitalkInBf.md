@@ -2,7 +2,7 @@
 title: 在bf中部署Artitalk说说
 tags: [Hexo, 说说, 博客]
 categories: [代码]
-image: "https://tuchuang.voooe.cn/images/2024/06/19/artitalkInBf.webp"
+image:
 description: 这篇文章讲述了如何在Butterfly中部署artitalk说说
 date: 2024-03-25 10:13:16
 ---

@@ -2,7 +2,7 @@
 title: 基于Tg的说说
 tags: [博客, Hexo, 说说]
 categories: [代码]
-image: "https://tuchuang.voooe.cn/images/2024/06/19/tgtalk.webp"
+image:
 description: 这篇文章讲述了如何安装基于Telegram的说说页面
 date: 2024-03-29 11:33:18
 ---

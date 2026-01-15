@@ -2,7 +2,7 @@
 title: 免费安装杜比全景声
 tags: [软件]
 categories: [经验分享]
-image: "https://tuchuang.voooe.cn/images/2024/06/19/InstallDolby.webp"
+image:
 description: 这篇文章将教你如何安装杜比全景声
 date: 2024-04-03 11:09:28
 ---

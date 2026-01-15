@@ -3,7 +3,7 @@ title: SpringBootのPost登录注册
 categories: [代码]
 tags: [SpringBoot]
 description: SpringBootのPost登录注册案例笔记
-image: "https://tuchuang.voooe.cn/images/2024/06/19/SpringBoot.webp"
+image:
 date: 2024-02-04 03:08:13
 recommend: true
 ---

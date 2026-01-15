@@ -2,7 +2,7 @@
 title: Mui学习资料总结
 tags: [Mui, 前端]
 categories: [经验分享]
-image: "https://tuchuang.voooe.cn/images/2024/06/19/MuiziLiao.webp"
+image:
 description: 总结了Mui的一些学习资料
 date: 2024-04-01 09:24:42
 ---

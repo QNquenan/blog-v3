@@ -3,7 +3,7 @@ title: 侧滑菜单Div模式
 categories: [代码]
 tags: [Mui, 前端, 移动应用]
 description: Muiの侧滑菜单Div模式笔记
-image: "https://tuchuang.voooe.cn/images/2024/06/19/MUICanvas.webp"
+image:
 date: 2024-02-20 21:56:53
 ---
 

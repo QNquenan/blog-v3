@@ -3,7 +3,7 @@ title: 使用Python下载图片
 tags: [Python]
 categories: [代码]
 description: 用Python来写一个小程序批量下载图片
-image: "https://tuchuang.voooe.cn/images/2024/06/19/PythonImg.webp"
+image:
 date: 2024-02-26 11:08:07
 ---
 

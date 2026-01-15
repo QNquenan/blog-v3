@@ -2,7 +2,7 @@
 title: 自用的bf导航栏魔改
 tags: [博客]
 categories: [代码]
-image: "https://tuchuang.voooe.cn/images/2024/06/19/bfNav.webp"
+image:
 description: 这篇文章讲述了博主魔改导航栏的过程
 date: 2024-03-25 21:04:52
 recommend: true
