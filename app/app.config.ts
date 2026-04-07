@@ -78,7 +78,7 @@ export default defineAppConfig({
 
 	/** 左侧栏顶部 Logo */
 	header: {
-		logo: 'https://i.p-i.vip/43/20240913-66e403f2331ec.webp',
+		logo: 'https://pic1.imgdb.cn/item/69d51522cfae5fcb267af121.webp',
 		/** 展示标题文本，否则展示纯 Logo */
 		showTitle: true,
 		subtitle: blogConfig.subtitle,

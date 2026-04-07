@@ -9,7 +9,7 @@ const basicConfig = {
 	description: '鹊楠的个人博客，“彼方尚有荣光在，世界不止眼前的苟且，还有诗和远方！🫡”，鹊楠是一个啥都只会点皮毛的编程爱好者，这个博客用于分享一些自己的学习笔记和技术分享，涵盖了学习、编程、软件分享、杂谈等领域。',
 	author: {
 		name: '鹊楠',
-		avatar: 'https://i.p-i.vip/43/20240913-66e403f2331ec.webp',
+		avatar: 'https://pic1.imgdb.cn/item/69d51522cfae5fcb267af121.webp',
 		email: 'qn2987271942@outlook.com',
 		homepage: 'https://www.quenan.cn/',
 	},
